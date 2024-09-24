@@ -9,7 +9,7 @@
         <item>Luces led</item>
         <item>Tira de luces</item>
         <item>Palanca burbuja</item>
-        <item>Palanca rojo</item>
+        <item>Palanca tornasol</item>
     </string-array>
 
     <string-array name="lista_productos_descripcion">
@@ -19,7 +19,7 @@
         <item>Cinta reflectante bicolor</item>
         <item>Luces led para focos</item>
         <item>Tira de luces para interior</item>
-        <item>Palanca para el freno de mano con efecto burbuja</item>
-        <item>Palanca para el freno de mano color rojo</item>
+        <item>Palanca para el freno de mano con burbujas</item>
+        <item>Palanca para el freno de mano tornasol</item>
     </string-array>
 </resources>

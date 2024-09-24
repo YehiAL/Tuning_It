@@ -1,6 +1,7 @@
 package com.example.tuningit;
 
 public class modeloProductos {
+    //creacion de una clase para poder ingresar datos de productos
     String nombreProducto;
     String descripcionProducto;
     int imagen;

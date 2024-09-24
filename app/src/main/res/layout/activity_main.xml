@@ -33,7 +33,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/tvNombreUsuario"
             android:layout_width="287dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -50,7 +50,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/tvContrasena"
             android:layout_width="286dp"
             android:layout_height="wrap_content"
             android:ems="10"

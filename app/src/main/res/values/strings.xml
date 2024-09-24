@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">TuningIt</string>
+
+    <string-array name="lista_productos">
+        <item>Vinilo rojo</item>
+        <item>Vinilo azul</item>
+        <item>Cinta amarilla</item>
+        <item>Cinta bicolor</item>
+        <item>Luces led</item>
+        <item>Tira de luces</item>
+        <item>Palanca burbuja</item>
+        <item>Palanca rojo</item>
+    </string-array>
+
+    <string-array name="lista_productos_descripcion">
+        <item>Vinilo para autos color rojo</item>
+        <item>Vinilo para autos color azul</item>
+        <item>Cinta reflectante amarilla</item>
+        <item>Cinta reflectante bicolor</item>
+        <item>Luces led para focos</item>
+        <item>Tira de luces para interior</item>
+        <item>Palanca para el freno de mano con efecto burbuja</item>
+        <item>Palanca para el freno de mano color rojo</item>
+    </string-array>
 </resources>

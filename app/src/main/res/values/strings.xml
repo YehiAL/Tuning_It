@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TuningIt</string>
+    <string name="app_name">Tuning It</string>
 
     <string-array name="lista_productos">
         <item>Vinilo rojo</item>

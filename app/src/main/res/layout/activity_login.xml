@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/base"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
@@ -22,7 +23,7 @@
             android:textSize="30sp" />
 
         <EditText
-            android:id="@+id/nombreTxt"
+            android:id="@+id/tvNombreUsuarioLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -39,7 +40,7 @@
             android:textSize="30sp" />
 
         <EditText
-            android:id="@+id/nombreCompletoTxt"
+            android:id="@+id/tvNombreCompletoLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -56,7 +57,7 @@
             android:textSize="30sp" />
 
         <EditText
-            android:id="@+id/correoTxt"
+            android:id="@+id/tvCorreoLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -72,7 +73,7 @@
             android:textSize="30sp" />
 
         <EditText
-            android:id="@+id/contrasenaTxt"
+            android:id="@+id/tvContrasenaLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -88,7 +89,7 @@
             android:textSize="30sp" />
 
         <EditText
-            android:id="@+id/confiContrasenaTxt"
+            android:id="@+id/tvConfirmarContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -101,7 +102,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/registrarBtn"
+                android:id="@+id/btnRegistrarLogin"
                 android:layout_width="180dp"
                 android:layout_height="63dp"
                 android:layout_marginBottom="84dp"

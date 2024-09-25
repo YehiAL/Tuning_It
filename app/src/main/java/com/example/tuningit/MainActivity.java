@@ -7,11 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,16 +27,35 @@ public class MainActivity extends AppCompatActivity {
         btnIngresar = findViewById(R.id.btnIngresar);
         btnRegistrar = findViewById(R.id.btnRegistrar);
 
-        btnIngresar.setOnClickListener(new View.OnClickListener() {
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                explicito();
+
+                ir_login();
+            }
+        });
+        
+        btnIngresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ir_menu();
             }
         });
     }
 
-    public void explicito(){
-        Intent intent=new Intent(this, Principal.class);
+    private void ir_menu() {
+        String usuario = tvNombreUsuario.getText().toString();
+        String contra = tvContrasena.getText().toString();
+        Intent intent = new Intent(this, Menu.class);
+        intent.putExtra("usuario",usuario);
         startActivity(intent);
+        finish();
+    }
+
+    public void ir_login(){
+        Intent intent=new Intent(this, Login.class);
+        startActivity(intent);
+
     }
 }

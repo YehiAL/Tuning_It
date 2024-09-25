@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="10dp"
+    android:background="@color/base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="412dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/negro"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnIrProductos"
+        android:layout_width="160dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="344dp"
+        android:backgroundTint="@color/rojo"
+        android:text="Productos"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toTopOf="@+id/btnSalir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnIrLista"
+        android:layout_width="160dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/rojo"
+        android:text="Lista de deseados"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toTopOf="@+id/btnIrAgenda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="160dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="172dp"
+        android:backgroundTint="@color/rojo"
+        android:text="Salir"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnIrAgenda"
+        android:layout_width="160dp"
+        android:layout_height="89dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="172dp"
+        android:backgroundTint="@color/rojo"
+        android:text="Agenda"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNombreUsuarioMenu"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="hola usuario"
+        android:textColor="@color/negro"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

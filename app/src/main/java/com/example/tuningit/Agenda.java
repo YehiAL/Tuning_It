@@ -35,7 +35,7 @@ public class Agenda extends AppCompatActivity {
     }
 
     private void ir_menu() {
-        Intent intent = new Intent(this, Menu.class);
+        Intent intent = new Intent(Agenda.this, Menu.class);
         startActivity(intent);
         finish();
     }

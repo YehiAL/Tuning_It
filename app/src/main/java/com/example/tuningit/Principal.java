@@ -1,6 +1,9 @@
 package com.example.tuningit;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Principal extends AppCompatActivity {
+public class Principal extends AppCompatActivity implements RecyclerViewInterface {
 
     //Crear un arrayList de productos
     ArrayList<modeloProductos> modelosProductos = new ArrayList<>();
@@ -20,10 +23,14 @@ public class Principal extends AppCompatActivity {
     int[] imagen_productos = {R.drawable.vinilo_rojo,R.drawable.vinilo_azul,R.drawable.cinta_amarilla,R.drawable.cinta_bicolor,R.drawable.luces_led,
             R.drawable.tiras_led,R.drawable.palanca_burbuja,R.drawable.palanca_tornasol};
 
+    private Button btnRegresar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+
+        btnRegresar = findViewById(R.id.btnRegresar);
 
         //asignar el id del recycler view a una variable
         RecyclerView recyclerView = findViewById(R.id.recyclerView_id);
@@ -32,10 +39,23 @@ public class Principal extends AppCompatActivity {
         setearModeloProductos();
 
         //creamos el adapter hecho
-        p_RecyclerViewAdapter adapter = new p_RecyclerViewAdapter(this,modelosProductos);
+        p_RecyclerViewAdapter adapter = new p_RecyclerViewAdapter(this,modelosProductos,this);
         recyclerView.setAdapter(adapter);
         //Se lo entregamos al recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        btnRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ir_menu();
+            }
+        });
+    }
+
+    private void ir_menu() {
+        Intent intent = new Intent(this, Menu.class);
+        startActivity(intent);
+        finish();
     }
 
     private void setearModeloProductos(){
@@ -49,5 +69,17 @@ public class Principal extends AppCompatActivity {
                     descripcion_productos[i],
                     imagen_productos[i]));
         }
+    }
+
+    @Override
+    public void itemSeleccionado(int position) {
+        Intent intent = new Intent(Principal.this, Productos.class);
+
+        intent.putExtra("nombreProducto",modelosProductos.get(position).getNombreProducto());
+        intent.putExtra("descripcionProductos",modelosProductos.get(position).getDescripcionProducto());
+        intent.putExtra("imagen",modelosProductos.get(position).getImagen());
+
+        startActivity(intent);
+        finish();
     }
 }

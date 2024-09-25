@@ -13,12 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class p_RecyclerViewAdapter extends RecyclerView.Adapter<p_RecyclerViewAdapter.MyViewHolder> {
+    private RecyclerViewInterface recyclerViewInterface;
     Context context;
     ArrayList<modeloProductos>modelosProductos;
 
-    public p_RecyclerViewAdapter(Context context, ArrayList<modeloProductos> modelosProductos ){
+    public p_RecyclerViewAdapter(Context context, ArrayList<modeloProductos> modelosProductos, RecyclerViewInterface recyclerViewInterface ){
         this.context = context;
         this.modelosProductos = modelosProductos;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
@@ -27,7 +29,7 @@ public class p_RecyclerViewAdapter extends RecyclerView.Adapter<p_RecyclerViewAd
         //Aqui es donde se completa el layout
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate((R.layout.recyclerviewcolumnas), parent, false);
-        return new p_RecyclerViewAdapter.MyViewHolder(view);
+        return new p_RecyclerViewAdapter.MyViewHolder(view, recyclerViewInterface);
     }
 
     @Override
@@ -45,19 +47,32 @@ public class p_RecyclerViewAdapter extends RecyclerView.Adapter<p_RecyclerViewAd
         return modelosProductos.size();
     }
 
-    public static  class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
         //Asigna variables a los views
         //como el onCreate
 
         ImageView imagenProductos;
         TextView tvNombreProductos, tvDescripcionProductos;
 
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
 
             imagenProductos = itemView.findViewById(R.id.ivProductos);
             tvNombreProductos = itemView.findViewById(R.id.tvNomProductos);
             tvDescripcionProductos = itemView.findViewById(R.id.tvDescProductos);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (recyclerViewInterface != null){
+                        int pos = getAdapterPosition();
+
+                        if(pos != RecyclerView.NO_POSITION){
+                            recyclerViewInterface.itemSeleccionado(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 }

@@ -56,6 +56,6 @@ public class MainActivity extends AppCompatActivity {
     public void ir_login(){
         Intent intent=new Intent(this, Login.class);
         startActivity(intent);
-
+        finish();
     }
 }

@@ -6,23 +6,27 @@
     android:id="@+id/main"
     android:orientation="vertical"
     android:padding="15dp"
+    android:background="@color/base"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Productos">
 
     <TextView
-        android:id="@+id/labelProducto"
+        android:id="@+id/tvNombreProducto_prod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Vinilo color rojo"
         android:textSize="25sp"
+        android:textColor="@color/negro"
         android:textStyle="normal"
         android:padding="15dp"
         android:layout_marginBottom="10dp"/>
 
     <ImageView
+        android:id="@+id/ivProductos_prod"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:layout_gravity="left"
         android:src="@drawable/cinta_amarilla"
         />
 
@@ -34,26 +38,25 @@
         android:max="5"
         android:numStars="5"
         android:rating="5"
+        android:backgroundTint="@color/rojo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="jfhdsfjasdfhjasd"
-        android:textSize="30dp"/>
+
 
     <TextView
+        android:id="@+id/tvDescProductos_prod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:textColor="@color/negro"
         android:text="lLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
 
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="10dp"
         android:background="?android:attr/listDivider" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,24 +67,26 @@
             android:id="@+id/btnComprarProductos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="60dp"
-            android:text="Comprar"
+            android:layout_marginEnd="56dp"
             android:backgroundTint="@color/rojo"
+            android:text="Comprar"
+            android:textColor="@color/blanco"
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="30dp" />
+            tools:layout_editor_absoluteY="98dp" />
 
         <Button
             android:id="@+id/btnRegresarProductos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Regresar"
             android:backgroundTint="@color/rojo"
+            android:text="Regresar"
+            android:textColor="@color/blanco"
             app:layout_constraintEnd_toStartOf="@+id/btnComprarProductos"
-            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintHorizontal_bias="0.142"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="30dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="98dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

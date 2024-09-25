@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre de Usuario:"
+            android:textColor="@color/negro"
             android:textSize="30sp" />
 
         <EditText
@@ -28,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
-            android:hint="Ingrese su nombre de usuario:"
+            android:textColor="@color/negro"
             android:inputType="text"
             android:textSize="25sp" />
 
@@ -37,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre y apellido:"
+            android:textColor="@color/negro"
             android:textSize="30sp" />
 
         <EditText
@@ -45,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
-            android:hint="Ingrese su nombre y su apellido"
+            android:textColor="@color/negro"
             android:inputType="text"
             android:textSize="25sp" />
 
@@ -54,6 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Correo:"
+            android:textColor="@color/negro"
             android:textSize="30sp" />
 
         <EditText
@@ -62,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
-            android:hint="Correo electronico"
+            android:textColor="@color/negro"
             android:textSize="25sp" />
 
         <TextView
@@ -70,6 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contraseña:"
+            android:textColor="@color/negro"
             android:textSize="30sp" />
 
         <EditText
@@ -78,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
-            android:hint="Ingrese una contraseña"
+            android:textColor="@color/negro"
             android:textSize="25sp" />
 
         <TextView
@@ -86,6 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Confirmar contraseña:"
+            android:textColor="@color/negro"
             android:textSize="30sp" />
 
         <EditText
@@ -94,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:ems="10"
-            android:hint="validar contraseña"
+            android:textColor="@color/negro"
             android:textSize="25sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout

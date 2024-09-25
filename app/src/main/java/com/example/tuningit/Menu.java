@@ -64,11 +64,15 @@ public class Menu extends AppCompatActivity {
     }
 
     private void ir_lista() {
+        Intent intent = new Intent(this, ListaDeseados.class);
+        startActivity(intent);
+
     }
 
     private void ir_agenda() {
         Intent intent = new Intent(this, Agenda.class);
         startActivity(intent);
+
     }
 
     private void ir_productos() {

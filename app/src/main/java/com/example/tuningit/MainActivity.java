@@ -3,6 +3,7 @@ package com.example.tuningit;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(validarUsuario(usuario,contra)){
                     Intent intent = new Intent(getApplicationContext(), Menu.class);
+                    //Le pasamos un intent con el nombre de usuario
                     intent.putExtra("usuario",usuario);
                     startActivity(intent);
                     finish();

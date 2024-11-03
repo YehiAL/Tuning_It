@@ -20,7 +20,7 @@
         android:text="Regresar"
         android:textSize="15sp"
         android:textColor="@color/blanco"
-        android:backgroundTint="@color/rojo_oscuro"
+        android:backgroundTint="@color/rojo"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
